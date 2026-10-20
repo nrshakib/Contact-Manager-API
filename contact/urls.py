@@ -9,8 +9,8 @@ urlpatterns = [
          views.ContactListCreateView.as_view(),
          name = "all-contacts"),
 
-    # path(
-    #     'contacts/<int:id>/',
-    #      views.ContactRetrieveUpdateDeleteView.as_view(),
-    #      name = "single-contact"),
+    path(
+        'contact/<int:id>/',
+         views.ContactRetrieveUpdateDeleteView.as_view(),
+         name = "single-contact"),
 ]
