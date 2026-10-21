@@ -1,6 +1,8 @@
-from django.http import HttpResponse
-from django.shortcuts import render
+from rest_framework import viewsets
 
-# Create your views here.
-def notes(request):
-    return HttpResponse('Notes')
+from notes.models import Notes
+from notes.serializers import NotesSerializer
+
+class NotesViewSet(viewsets.ModelViewSet):
+    queryset = Notes.objects.all()
+    serializer_class = NotesSerializer
