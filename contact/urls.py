@@ -5,7 +5,7 @@ from contact import views
 
 urlpatterns = [
     path(
-        'contacts/',
+        'all/',
          views.ContactListCreateView.as_view(),
          name = "all-contacts"),
 
